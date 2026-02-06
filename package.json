@@ -1,5 +1,6 @@
 {
   "name": "server",
+  "$schema": "https://www.schemastore.org/package.json",
   "version": "1.0.0",
   "description": "Express server with TypeScript",
   "main": "index.ts",

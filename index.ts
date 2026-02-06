@@ -25,7 +25,7 @@ interface ContactFormRequest extends Request {
 const transporter: Transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
     port: parseInt(process.env.SMTP_PORT as string),
-    secure: true, // for 465 true, for 587 false
+    secure: process.env.SMTP_SECURE === 'true', // for 465 true, for 587 false
     auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASSWORD
