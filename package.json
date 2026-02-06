@@ -8,6 +8,7 @@
     "dev": "nodemon --watch . --ext ts,js,json --exec \"node --loader ts-node/esm\" index.ts",
     "start": "nodemon index.ts",
     "start:dev": "nodemon --exec \"node --loader ts-node/esm\" index.ts",
+    "start:prod": "nodemon --exec \"node --loader ts-node/esm\" dist/index.js",
     "build": "tsc -p ."
   },
   "keywords": [],
