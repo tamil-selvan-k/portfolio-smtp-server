@@ -1,9 +1,27 @@
+# Dependencies
 node_modules
+npm-debug.log
+yarn-error.log
 
-package-lock.json
-
+# Git
+.git
 .gitignore
 
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Build output
 dist
 
-.env
+# IDE
+.vscode
+.idea
+
+# Documentation
+*.md
+README.md
+
+# Misc
+.DS_Store
