@@ -32,6 +32,10 @@ const transporter: Transporter = nodemailer.createTransport({
     }
 });
 
+app.get('/', (req: Request, res: Response) => {
+    res.status(200).json('Welcome to Tamil Selvan\'s Portfolio');
+});
+
 app.post('/contact', async (req: ContactFormRequest, res: Response) => {
     const {name, email, subject, message} = req.body;
 
