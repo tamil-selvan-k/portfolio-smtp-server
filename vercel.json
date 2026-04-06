@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "buildCommand": "echo \"Vercel will build the API function automatically\"",
+  "functions": {
+    "api/index.ts": {
+      "runtime": "@vercel/node"
+    }
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "api/index.ts"
+    }
+  ]
+}
