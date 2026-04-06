@@ -7,28 +7,8 @@ dotenv.config();
 
 const app = express();
 
-const allowedOrigins = [
-  process.env.CLIENT_URL,
-  process.env.FRONTEND_URL,
-  process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : undefined,
-  "*",
-].filter((origin): origin is string => Boolean(origin));
-
 const corsOptions = {
-  origin(origin: string | undefined, callback: (error: Error | null, allow?: boolean) => void) {
-    // Allow non-browser requests and same-origin server calls.
-    if (!origin) {
-      callback(null, true);
-      return;
-    }
-
-    if (allowedOrigins.includes(origin)) {
-      callback(null, true);
-      return;
-    }
-
-    callback(new Error(`Origin not allowed by CORS: ${origin}`));
-  },
+  origin: true,
   methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type'],
   optionsSuccessStatus: 204,
